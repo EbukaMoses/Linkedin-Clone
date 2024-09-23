@@ -1,0 +1,95 @@
+.card .makepost_img {
+  align-items: center;
+  gap: 20px;
+}
+.card .makepost_img img,
+.card .post_author .post_author_info img {
+  width: 10%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.card .makepost {
+  border: 2px solid var(--Black);
+  padding: 2%;
+  width: 100%;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  cursor: pointer;
+}
+.card .article {
+  justify-content: space-around;
+}
+.card .article .article_sub {
+  align-items: center;
+  padding: 1.5% 2.5%;
+  gap: 5px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.card .article .article_sub:hover {
+  background: var(--Grey);
+}
+.card .article .article_sub .article_icon {
+  font-size: 20px;
+  color: #378fe9;
+}
+.card .article .article_sub .article_icon2 {
+  font-size: 27px;
+  color: #c78626;
+}
+.card .article .article_sub .article_icon3 {
+  font-size: 27px;
+  color: #e06847;
+}
+.card .article .article_sub span {
+  font-weight: 500;
+  color: var(--Black2);
+}
+
+/* -------------------------------------POST CARD ------------------------------------  */
+.post_author {
+  align-items: center;
+}
+.post_author_info {
+  gap: 20px;
+}
+.post_author_details .post_author_name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--Black);
+}
+.post_author_details .post_author_position,
+.post_author_details .post_author_time {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--Gray);
+}
+.post_author .post_calltoaction_btn {
+  gap: 10px;
+}
+.post_author .post_calltoaction_btn .calltoaction_icon {
+  cursor: pointer;
+}
+.post_contents .post_writeup {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 15px 0px;
+}
+.post_contents .post_img img {
+  width: 100%;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
