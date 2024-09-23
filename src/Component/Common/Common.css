@@ -93,3 +93,248 @@
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
 }
+.post_reactions {
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.post_reactions .post_owner {
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 70px;
+  color: var(--Gray);
+}
+.post_reactions .post_owner img {
+  width: 30%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.post_reactions .post_owner .post_owner_icon {
+  font-size: 24px;
+  color: var(--Black2);
+}
+.post_reactions .post_owner .post_owner_icon:hover {
+  color: var(--Black);
+}
+.post_like,
+.post_repost {
+  position: relative;
+}
+.post_like:hover .like_hover,
+.like_hover:hover {
+  display: flex;
+}
+
+/* ---------------LIKE POP UP --------------  */
+.like_hover {
+  position: absolute;
+  display: none;
+  bottom: 40px;
+  left: 0;
+  gap: 10px;
+  background: var(--White);
+  padding: 11px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.like_hover_icon {
+  transform: rotate(180deg);
+  font-size: 23px;
+  color: var(--Blue);
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.like_hover_icon:hover {
+  transform: rotate(180deg);
+
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  margin-top: -10px;
+}
+.like_hover_icon2 {
+  font-size: 25px;
+  font-size: 25px;
+  color: #6dae4f;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  -o-transition: all 0.1s;
+}
+.like_hover_icon2:hover {
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  margin-top: -10px;
+}
+.like_hover_icon3 {
+  transform: rotateY(180deg);
+  font-size: 25px;
+  color: #bba9d1;
+}
+.like_hover_icon3:hover {
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  margin-top: -10px;
+}
+.like_hover_icon4 {
+  font-size: 25px;
+  color: #df704d;
+}
+.like_hover_icon4:hover {
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  margin-top: -10px;
+}
+.like_hover_icon5 {
+  font-size: 25px;
+  color: #f5bb5c;
+}
+.like_hover_icon5:hover {
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  margin-top: -10px;
+}
+.like_hover_icon6 {
+  font-size: 25px;
+  color: #79deee;
+}
+.like_hover_icon6:hover {
+  transform: scale(2);
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  margin-top: -10px;
+}
+
+.post_like,
+.post_comment,
+.post_repost,
+.post_share {
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 1.3% 2.3%;
+  color: var(--Black2);
+}
+.post_like .icon {
+  font-size: 22px;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.post_comment .icon {
+  font-size: 20px;
+}
+.post_repost .icon {
+  font-size: 30px;
+}
+.post_share .icon {
+  font-size: 23px;
+}
+.post_like span,
+.post_comment span,
+.post_repost span,
+.post_share span {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--Black2);
+}
+.post_owner:hover,
+.post_like:hover,
+.post_comment:hover,
+.post_repost:hover,
+.post_share:hover {
+  background: var(--Grey);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  color: var(--Black);
+}
+.post_like:hover span,
+.post_comment:hover span,
+.post_repost:hover span,
+.post_share:hover span {
+  color: var(--Black);
+}
+/* ------------END OF LIKE POP UP ----------------  */
+
+/* --------------------POST COMMENT ----------------------  */
+.post_make_comment {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5px;
+  border: 2px solid var(--Gray);
+  border-radius: 22px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  -ms-border-radius: 22px;
+  -o-border-radius: 22px;
+  overflow: hidden;
+}
+.post_make_comment input {
+  padding: 2%;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.post_comment_icons {
+  gap: 10px;
+}
+.post_comment_icons .smile {
+  font-size: 20px;
+  color: var(--Black2);
+  font-weight: bold;
+  cursor: pointer;
+}
+.post_comment_icons .img {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* ----------------------------REPOST POP UP--------------- */
+.repost_pop {
+  position: absolute;
+  width: 100%;
+  background: var(--Grey);
+  top: 40px;
+  right: 0;
+  padding: 10px;
+  border: 2px solid var(--Gray);
+}

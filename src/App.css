@@ -2,8 +2,8 @@
   --Blue: #004182;
   --Gray: #989898;
   --Grey: #f3f3f3;
-  --Black: #191919;
-  --Black2: rgb(0 0 0 / 0.75);
+  --Black: #000;
+  --Black2: #191919;
   --Bg: #f4f2ee;
   --White: #fff;
 }
@@ -157,7 +157,7 @@ body {
   flex-basis: 20%;
 }
 .main {
-display: flex;
+  display: flex;
   flex-basis: 60%;
   flex-direction: column;
   gap: 10px;
@@ -174,4 +174,7 @@ display: flex;
   -moz-border-radius: 11px;
   -ms-border-radius: 11px;
   -o-border-radius: 11px;
+}
+.hr {
+  margin: 1% 0%;
 }
