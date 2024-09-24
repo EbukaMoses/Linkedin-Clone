@@ -21,7 +21,7 @@ body {
   background: var(--Bg);
 }
 .navbar {
-position: fixed;
+/* position: fixed; */
   width: 100%;
   background: unst;
   background: var(--White) !important;

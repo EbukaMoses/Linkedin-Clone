@@ -11,7 +11,7 @@ const CreatePostCard = () => {
   return (
     <div className="card postModal">
       {/* --------------MAKE POST MODAL -------------  */}
-      {/* {post && <PostModal />} */}
+      {post && <PostModal />}
       <div className="makepost_img flex">
         <img src={me} alt="" />
         <div className="makepost" onClick={() => setPose(true)}>
