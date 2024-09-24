@@ -9,6 +9,12 @@ const Feed = () => {
       <div className="main">
         <CreatePostCard />
         <PostCard />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
       <div className="rightside">right</div>
     </section>

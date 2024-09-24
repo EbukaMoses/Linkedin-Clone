@@ -331,10 +331,65 @@
 /* ----------------------------REPOST POP UP--------------- */
 .repost_pop {
   position: absolute;
-  width: 100%;
-  background: var(--Grey);
-  top: 40px;
+  width: 350px;
+  align-items: start;
+  background: var(--White);
+  top: 50px;
   right: 0;
-  padding: 10px;
-  border: 2px solid var(--Gray);
+  /* padding: 10px; */
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 1p8;
+  -webkit-border-radius: 1p8;
+  -moz-border-radius: 1p8;
+  -ms-border-radius: 1p8;
+  -o-border-radius: 1p8;
+}
+.repost_pop_box {
+  align-items: center;
+  gap: 20px;
+  padding: 2% 0% 2% 5%;
+  width: 100%;
+}
+.repost_pop_box:hover {
+  background: var(--Grey);
+}
+.repost_pop_box .repost_icon {
+  font-size: 25px;
+  color: var(--Black2);
+}
+.repost_pop_box .repost_icon2 {
+  font-size: 35px;
+  color: var(--Black2);
+}
+.repost_desc {
+  display: flex;
+  text-align: left;
+}
+.repost_desc h4 {
+  font-size: 16px;
+  color: var(--Black2);
+}
+.repost_desc span {
+  font-size: 10px;
+}
+
+/* --------------------POST MODAL----------------  */
+.postModal {
+  position: relative;
+}
+.modal_out {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000fe;
+  display: grid;
+  place-items: center;
+  z-index: 999 !important;
+}
+.modal_card {
+  z-index: 999 !important;
+  background: var(--White);
 }

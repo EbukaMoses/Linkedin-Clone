@@ -19,6 +19,7 @@ import { FaEdit } from "react-icons/fa";
 const PostCard = () => {
   const [comment, setComment] = useState("");
   const [showComment, setShowComment] = useState(false);
+  const [respost, setRepost] = useState(false);
   return (
     <div className="card">
       <div className="post_author flex">
@@ -83,28 +84,32 @@ const PostCard = () => {
             <span>Comment</span>
           </div>
 
-          <div className="post_repost flex">
+          <div
+            className="post_repost flex"
+            onClick={() => setRepost((prev) => !prev)}
+          >
             <BiRepost className="icon" />
             <span>Repost</span>
-
             {/* -------REPOST POP DOWN ---------  */}
-            <div className="repost_pop flex flex-col">
-              <div className="repost_pop_box flex">
-                <FaEdit className="repost_icon" />
-                <div className="repost_desc flex flex-col">
-                  <h6>Repost with your thoughts</h6>
-                  <span>Create a new post with Valeries post attached</span>
+            {respost && (
+              <div className="repost_pop flex flex-col">
+                <div className="repost_pop_box flex">
+                  <FaEdit className="repost_icon" />
+                  <div className="repost_desc flex flex-col">
+                    <h4>Repost with your thoughts</h4>
+                    <span>Create a new post with Valeries post attached</span>
+                  </div>
                 </div>
-              </div>
 
-              <div className="repost_pop_box flex">
-                <BiRepost className="repost_icon" />
-                <div className="repost_desc flex flex-col">
-                  <h6>Repost</h6>
-                  <span>Instantly bring Valeries post to others' feeds</span>
+                <div className="repost_pop_box flex">
+                  <BiRepost className="repost_icon2" />
+                  <div className="repost_desc flex flex-col">
+                    <h4>Repost</h4>
+                    <span>Instantly bring Valeries post to others' feeds</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
 
           <div className="post_share flex">

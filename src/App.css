@@ -1,9 +1,9 @@
 :root {
   --Blue: #004182;
   --Gray: #989898;
-  --Grey: #f3f3f3;
+  --Grey: #e5e5e5;
   --Black: #000;
-  --Black2: #191919;
+  --Black2: #363636;
   --Bg: #f4f2ee;
   --White: #fff;
 }
@@ -21,6 +21,7 @@ body {
   background: var(--Bg);
 }
 .navbar {
+position: fixed;
   width: 100%;
   background: unst;
   background: var(--White) !important;
@@ -143,8 +144,6 @@ body {
 }
 .flex-col {
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .flex-row {
   flex-direction: row !important;

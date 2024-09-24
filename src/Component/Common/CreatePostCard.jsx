@@ -1,16 +1,22 @@
-import React from "react";
-import "./Common.css"
+import React, { useState } from "react";
+import "./Common.css";
 import me from "/images/me.jpg";
 import { FaImage } from "react-icons/fa6";
 import { MdPostAdd } from "react-icons/md";
 import { PiArticleNyTimesFill } from "react-icons/pi";
+import PostModal from "./PostModal";
 
 const CreatePostCard = () => {
+  const [post, setPose] = useState(false);
   return (
-    <div className="card">
+    <div className="card postModal">
+      {/* --------------MAKE POST MODAL -------------  */}
+      {/* {post && <PostModal />} */}
       <div className="makepost_img flex">
         <img src={me} alt="" />
-        <div className="makepost">Start a post, try writing with AI</div>
+        <div className="makepost" onClick={() => setPose(true)}>
+          Start a post, try writing with AI
+        </div>
       </div>
       <div className="article flex">
         <div className="article_sub flex">
