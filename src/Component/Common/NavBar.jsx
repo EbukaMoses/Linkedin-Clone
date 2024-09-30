@@ -31,49 +31,49 @@ const NavBar = () => {
       </div>
 
       <div className="nav flex">
-          <div className="nav_icon flex">
-            <div className="nav_group">
-              <Link to="" className="navlink flex flex-col">
-                <AiFillHome className="navicon" />
-                <span>Home</span>
-              </Link>
-            </div>
-
-            <div className="nav_group flex flex-col">
-              <Link to="" className="navlink flex flex-col">
-                <HiUsers className="navicon" />
-                <span>My Network</span>
-              </Link>
-            </div>
-            <div className="nav_group flex flex-col">
-              <Link to="" className="navlink flex flex-col">
-                <IoBriefcase className="navicon" />
-                <span>Jobs</span>
-              </Link>
-            </div>
-            <div className="nav_group flex flex-col">
-              <Link to="" className="navlink flex flex-col">
-                <FaCommentDots className="navicon" />
-                <span>Messaging</span>
-              </Link>
-            </div>
-            <div className="nav_group flex flex-col">
-              <Link to="" className="navlink flex flex-col">
-                <GoBellFill className="navicon" />
-                <span>Notifications</span>
-              </Link>
-            </div>
-            <div className="nav_group flex flex-col">
-              <Link to="" className="navlink flex flex-col">
-                <img src={me} alt="" className="me" />
-                <div className="nav_group_sub flex">
-                  <span>Me</span>
-                  <MdArrowDropDown className="navicon" />
-                </div>
-              </Link>
-            </div>
+        <div className="nav_icon flex">
+          <div className="nav_group">
+            <Link to="" className="navlink flex flex-col">
+              <AiFillHome className="navicon" />
+              <span>Home</span>
+            </Link>
           </div>
-        
+
+          <div className="nav_group flex flex-col">
+            <Link to="/network" className="navlink flex flex-col">
+              <HiUsers className="navicon" />
+              <span>My Network</span>
+            </Link>
+          </div>
+          <div className="nav_group flex flex-col">
+            <Link to="" className="navlink flex flex-col">
+              <IoBriefcase className="navicon" />
+              <span>Jobs</span>
+            </Link>
+          </div>
+          <div className="nav_group flex flex-col">
+            <Link to="" className="navlink flex flex-col">
+              <FaCommentDots className="navicon" />
+              <span>Messaging</span>
+            </Link>
+          </div>
+          <div className="nav_group flex flex-col">
+            <Link to="/notifications" className="navlink flex flex-col">
+              <GoBellFill className="navicon" />
+              <span>Notifications</span>
+            </Link>
+          </div>
+          <div className="nav_group flex flex-col">
+            <Link to="" className="navlink flex flex-col">
+              <img src={me} alt="" className="me" />
+              <div className="nav_group_sub flex">
+                <span>Me</span>
+                <MdArrowDropDown className="navicon" />
+              </div>
+            </Link>
+          </div>
+        </div>
+
         <div className="nav_icons2 flex">
           <div className="nav_group  flex flex-col">
             <Link to="" className="navlink flex flex-col">
@@ -86,10 +86,9 @@ const NavBar = () => {
           </div>
           <div className="nav_group flex flex-col">
             <Link to="" className="navlink flex flex-col">
-            <img src={logoicon} alt="" className="try" />
-            <span>Try for NGN0</span>
+              <img src={logoicon} alt="" className="try" />
+              <span>Try for NGN0</span>
             </Link>
-            
           </div>
         </div>
       </div>

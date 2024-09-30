@@ -6,20 +6,17 @@ import { MdPostAdd } from "react-icons/md";
 import { PiArticleNyTimesFill } from "react-icons/pi";
 import PostModal from "./PostModal";
 
-const CreatePostCard = () => {
-  const [post, setPose] = useState(false);
+const CreatePostCard = ({ setPost, setMedia }) => {
   return (
-    <div className="card postModal">
-      {/* --------------MAKE POST MODAL -------------  */}
-      {post && <PostModal />}
+    <div className="card">
       <div className="makepost_img flex">
         <img src={me} alt="" />
-        <div className="makepost" onClick={() => setPose(true)}>
+        <div className="makepost" onClick={() => setPost(true)}>
           Start a post, try writing with AI
         </div>
       </div>
       <div className="article flex">
-        <div className="article_sub flex">
+        <div className="article_sub flex" onClick={() => setMedia(true)}>
           <FaImage className="article_icon" />
           <span>Media</span>
         </div>

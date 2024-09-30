@@ -1,0 +1,87 @@
+.notifications .leftside .smallcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+.notifications .leftside .smallcard a {
+  text-decoration: none;
+  color: var(--Blue);
+  font-weight: bold;
+}
+.notifications .main .card_yellow .heading {
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.notifications .main .card_yellow .heading h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.notifications .main .card_yellow .heading .icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+.notifications .main .card_yellow p {
+  margin-bottom: 10px;
+}
+.notifications .main .action_btn {
+  gap: 15px;
+}
+
+/* ---------------------- ALLCARD----------------------  */
+.notifi_card {
+  gap: 15px;
+  width: 100%;
+  background: var(--White);
+
+  border-radius: 11px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  -ms-border-radius: 11px;
+  -o-border-radius: 11px;
+}
+.all_card {
+  gap: 8px;
+  padding: 3%;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1.5px solid var(--Grey);
+}
+.all_card .dot {
+  align-items: center;
+  justify-content: center;
+  color: var(--Blue);
+}
+.all_card .img {
+  width: 20%;
+}
+.all_card .img img {
+  width: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.all_card .details {
+  gap: 15px;
+}
+.all_card .details div .btn {
+  margin-top: 10px;
+}
+.all_card .details p {
+  font-size: 14px;
+}
+
+/* --------------------MY POST -----------------------  */
+.myposts {
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+}
+.myposts .mypost_btn {
+  margin-top: 25px;
+}

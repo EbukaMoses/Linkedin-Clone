@@ -16,10 +16,44 @@ import { GoSmiley } from "react-icons/go";
 import { FaRegImage } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
 
-const PostCard = () => {
+const TruncatedText = ({ text, limit }) => {
+  const [isTruncated, setIsTruncated] = useState(true);
+
+  // Toggle the state to show/hide the full text
+  const toggleText = () => {
+    setIsTruncated(!isTruncated);
+  };
+
+  // Truncate text if it's longer than the limit and `isTruncated` is true
+  const truncatedText =
+    text.length > limit ? `${text.substring(0, limit)}...` : text;
+
+  return (
+    <div>
+      <p>
+        {isTruncated ? truncatedText : text}
+        <a className="showmore" href="#" onClick={toggleText}>
+          {isTruncated ? "Show More" : "Show Less"}
+        </a>
+      </p>
+    </div>
+  );
+};
+
+const PostCard = ({ setShare }) => {
   const [comment, setComment] = useState("");
   const [showComment, setShowComment] = useState(false);
   const [respost, setRepost] = useState(false);
+
+  const longText = `This is a long paragraph of text that will be truncated. You can control how much text is shown, and the rest will be revealed when the user clicks a button. Still, your girl preaching Blockchain 😇 Digital Money Conference
+  happened over the weekend. I was happy to connect and share insights
+  on blockchain development with the audience.
+  This is a long paragraph of text that will be truncated. You can control how much text is shown, and the rest will be revealed when the user clicks a button. Still, your girl preaching Blockchain 😇 Digital Money Conference
+  happened over the weekend. I was happy to connect and share insights
+  on blockchain development with the audience.This is a long paragraph of text that will be truncated. You can control how much text is shown, and the rest will be revealed when the user clicks a button. Still, your girl preaching Blockchain 😇 Digital Money Conference
+  happened over the weekend. I was happy to connect and share insights
+  on blockchain development with the audience.`;
+
   return (
     <div className="card">
       <div className="post_author flex">
@@ -46,9 +80,7 @@ const PostCard = () => {
       </div>
       <div className="post_contents">
         <p className="post_writeup">
-          Still, your girl preaching Blockchain 😇 Digital Money Conference
-          happened over the weekend. I was happy to connect and share insights
-          on blockchain development with the audience.
+          <TruncatedText text={longText} limit={250} />
         </p>
         <div className="post_img">
           <img src={post} alt="" />
@@ -78,7 +110,10 @@ const PostCard = () => {
 
           <div
             className="post_comment flex"
-            onClick={() => setShowComment((prev) => !prev)}
+            onClick={() => {
+              setShowComment((prev) => !prev);
+              setRepost(false);
+            }}
           >
             <FaRegCommentDots className="icon" />
             <span>Comment</span>
@@ -91,7 +126,7 @@ const PostCard = () => {
             <BiRepost className="icon" />
             <span>Repost</span>
             {/* -------REPOST POP DOWN ---------  */}
-            {respost && (
+            {respost ? (
               <div className="repost_pop flex flex-col">
                 <div className="repost_pop_box flex">
                   <FaEdit className="repost_icon" />
@@ -109,10 +144,19 @@ const PostCard = () => {
                   </div>
                 </div>
               </div>
+            ) : (
+              ""
             )}
           </div>
 
-          <div className="post_share flex">
+          <div
+            className="post_share flex"
+            onClick={() => {
+              setShare(true);
+              setShowComment(false);
+              setRepost(false);
+            }}
+          >
             <PiPaperPlaneTiltFill className="icon" />
             <span>Send</span>
           </div>
