@@ -330,6 +330,7 @@
 
 /* ----------------------------REPOST POP UP--------------- */
 .repost_pop {
+  z-index: 999;
   position: absolute;
   width: 350px;
   align-items: start;
@@ -846,4 +847,16 @@
 .PromotedCard .detail .people span {
   font-size: 14px;
   color: var(--Gray);
+}
+
+/* --------------------ADCARD --------------  */
+.AdCard {
+  padding: 8px;
+  cursor: pointer;
+}
+.AdCard .img {
+  width: 300px;
+}
+.AdCard .img img {
+  width: 100%;
 }

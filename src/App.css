@@ -8,7 +8,7 @@
   --White: #fff;
   --Yellow: #fdf0de;
   --Green: green;
-  --DarkGreen: #004C33;
+  --DarkGreen: #004c33;
 }
 
 *,
@@ -142,6 +142,9 @@ body {
 }
 
 /* ------------------------------- GLOBAL CSS ------------------------------------  */
+.gap {
+  gap: 20px;
+}
 .flex {
   display: flex;
 }
@@ -236,9 +239,7 @@ body {
   background: var(--Green);
   color: var(--White);
   border: none;
-  
 }
 .btnTrans.bg_green:hover {
   background: var(--DarkGreen);
-  
 }
